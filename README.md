@@ -167,8 +167,8 @@ Após o arranque do programa e verificação dos argumentos do main, é necessá
   
 Os vectores/ou matrizes utilizados terão obrigatoriamente de ser alocados na zona de memória dinâmica. Essa alocação deverá ser feita após a leitura do número de colunas fornecido pelo utilizador ao correr o programa.
   
-Se o jogador ganhar o jogo, deverá ser apresentada a mensagem: ```Congratulations, you win!```, e em seguida o programa deve terminar.
-Caso perca, deverá ser apresentada a mensagem: ```You lost! Better luck next time.``` e em seguida o programa deve terminar.
+Se o jogador ganhar o jogo, deverá ser apresentada a mensagem `MSG_WIN`, e em seguida o programa deve terminar.
+Caso perca, deverá ser apresentada a mensagem `MSG_LOSE` e em seguida o programa deve terminar.
 
 ## 2.1 Controlos
   .   As teclas `a` e `s` são usadas para seleccionar as cartas da coluna LEFT e RIGHT, respectivamente.
