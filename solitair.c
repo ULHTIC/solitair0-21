@@ -2,7 +2,9 @@
 #include <stdlib.h>
 #include <math.h>
 
-
+#define MSG_WIN "You Win! Congratulations!"
+#define MSG_LOSE "You Lost! Better luck next time!"
+	
 
 /* needed functions */
 double uniRand(void);
