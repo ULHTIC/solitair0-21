@@ -154,7 +154,7 @@ O programa pode receber até 4 argumentos pela linha de comandos (argumentos do 
 ./solitair <level> <seed> <n rows> <n holds>
 ```
 onde 
-   .   <seed> valor inteiro para a seed do jogo - valor por omissão: 7877
+   .   <seed> valor inteiro para a seed do jogo - valor por omissão: 7
    .   <level> é o nível de dificuldade do jogo - valor por omissão: 3
    .   <n rows> é o número de linhas do jogo - valor por omissão: 12
    .   <n holds> é o número de linhas disponíveis em cada coluna HOLD - valor por omissão: 2
