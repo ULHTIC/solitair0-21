@@ -151,7 +151,7 @@ Agora o jogador poderá remover a carta da coluna LEFT e poderá também remover
 Neste repositório encontra-se um ficheiro .c com algumas funções necessárias e com a função main. O ficheiro deverá servir de base para o desenvolvimento deste projecto.
 O programa pode receber até 4 argumentos pela linha de comandos (argumentos do main), da seguinte forma:
 ```
-./solitair <seed> <level> <n rows> <n holds>
+./solitair <level> <seed> <n rows> <n holds>
 ```
 onde 
    .   <seed> valor inteiro para a seed do jogo - valor por omissão: 7877
