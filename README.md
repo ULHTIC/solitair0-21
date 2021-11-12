@@ -4,9 +4,9 @@
 
 # Projecto Final - Solitair 0-21
 
-# 1. Introdução
+## 1. Introdução
 
-## 1.1 Recomendações
+### 1.1 Recomendações
 
 Na resolução deste projecto deve ser utilizada a Linguagem de Programação C. Para além da correta implementação dos requisitos, tenha em conta os seguintes aspetos:
 - O código apresentado deve estar *bem indentado*. 
@@ -31,7 +31,7 @@ Para a realização deste projecto, os alunos deverão adquirir as seguintes com
 - Memória Dinâmica
 - git
 
-## 1.2 Descrição
+### 1.2 Descrição
 
 Este projecto consiste no desenvolvimento do jogo Solitair 0-21 em linguagem C. O jogo consiste em conseguir virar todas as cartas que estão na mesa, no entanto a soma terá que estar sempre entre 0 e 21. O jogo apresenta o seguinte tabuleiro:
 ```
@@ -146,7 +146,7 @@ No entanto, a carta que se revelou, continua a não poder ser retirada. Caso o j
 ```
 Agora o jogador poderá remover a carta da coluna LEFT e poderá também remover as cartas da coluna HOLD. Estas serão removidas pela ordem em que se apresentam na coluna (primeiro a carta com o número '2' e depois a carta com a coluna '5').
 
-# 2 Implementação
+## 2 Implementação
 
 Neste repositório encontra-se um ficheiro .c com algumas funções necessárias e com a função main. O ficheiro deverá servir de base para o desenvolvimento deste projecto.
 O programa pode receber até 4 argumentos pela linha de comandos (argumentos do main), da seguinte forma:
@@ -170,16 +170,166 @@ Os vectores/ou matrizes utilizados terão obrigatoriamente de ser alocados na zo
 Se o jogador ganhar o jogo, deverá ser apresentada a mensagem `MSG_WIN`, e em seguida o programa deve terminar.
 Caso perca, deverá ser apresentada a mensagem `MSG_LOSE` e em seguida o programa deve terminar.
 
-## 2.1 Controlos
+### 2.1 Controlos
   .   As teclas `a` e `s` são usadas para seleccionar as cartas da coluna LEFT e RIGHT, respectivamente.
   .   As teclas `q` e `w` são usadas para colocar as cartas em HOLD nas colunas da esquerda e direita, respectivamente.
   .   As teclas `z` e `x` são usadas para remover as cartas das colunas HOLD esquerda e direirta, respectivamente.
 
  
-# 2.2 Git
+### 2.2 Git
 Git deve ser utilizado no desenvolvimento do trabalho. Para isso os alunos devem criar um repositório **privado** no GitHub e sincronizar com a vossa cópia local do projecto. Em seguida, no GitHub, deverão ir settings->Manage Access->Add People e adicionar o professor ```parroz```. Devem sincronizar a vossa cópia local periodicamente com o repositório no GitHub (```git push```). 
+ 
+## 3 Exemplos de utilização
+Em seguida apresentam-se alguns exemplos de jogos:
+```
+./solitair 6 684 5 2
++-----+-----+---+-----+-----+
+|HOLD |LEFT |///|RIGHT|HOLD |
++-----+-----+---+-----+-----+
+|     |  *  |///|  *  |     |
+|     |  *  |///|  *  |     |
+|     |  *  |///|  *  |     |
+|     |  *  |///|  *  |     |
+|     | 12  |///| 2   |     |
++-----+-----+---+-----+-----+
+|SUM = 10                   |
++---------------------------+
+>q
++-----+-----+---+-----+-----+
+|HOLD |LEFT |///|RIGHT|HOLD |
++-----+-----+---+-----+-----+
+| 12  |  *  |///|  *  |     |
+|     |  *  |///|  *  |     |
+|     |  *  |///|  *  |     |
+|     | 6   |///|  *  |     |
+|     |     |///| 2   |     |
++-----+-----+---+-----+-----+
+|SUM = 10                   |
++---------------------------+
+>a
++-----+-----+---+-----+-----+
+|HOLD |LEFT |///|RIGHT|HOLD |
++-----+-----+---+-----+-----+
+| 12  |  *  |///|  *  |     |
+|     |  *  |///|  *  |     |
+|     | -8  |///|  *  |     |
+|     |     |///|  *  |     |
+|     |     |///| 2   |     |
++-----+-----+---+-----+-----+
+|SUM = 16                   |
++---------------------------+
+>a
++-----+-----+---+-----+-----+
+|HOLD |LEFT |///|RIGHT|HOLD |
++-----+-----+---+-----+-----+
+| 12  |  *  |///|  *  |     |
+|     | 0   |///|  *  |     |
+|     |     |///|  *  |     |
+|     |     |///|  *  |     |
+|     |     |///| 2   |     |
++-----+-----+---+-----+-----+
+|SUM = 8                    |
++---------------------------+
+>s
++-----+-----+---+-----+-----+
+|HOLD |LEFT |///|RIGHT|HOLD |
++-----+-----+---+-----+-----+
+| 12  |  *  |///|  *  |     |
+|     | 0   |///|  *  |     |
+|     |     |///|  *  |     |
+|     |     |///| -1  |     |
+|     |     |///|     |     |
++-----+-----+---+-----+-----+
+|SUM = 10                   |
++---------------------------+
+>s
++-----+-----+---+-----+-----+
+|HOLD |LEFT |///|RIGHT|HOLD |
++-----+-----+---+-----+-----+
+| 12  |  *  |///|  *  |     |
+|     | 0   |///|  *  |     |
+|     |     |///| -2  |     |
+|     |     |///|     |     |
+|     |     |///|     |     |
++-----+-----+---+-----+-----+
+|SUM = 9                    |
++---------------------------+
+>z
++-----+-----+---+-----+-----+
+|HOLD |LEFT |///|RIGHT|HOLD |
++-----+-----+---+-----+-----+
+|     |  *  |///|  *  |     |
+|     | 0   |///|  *  |     |
+|     |     |///| -2  |     |
+|     |     |///|     |     |
+|     |     |///|     |     |
++-----+-----+---+-----+-----+
+|SUM = 21                   |
++---------------------------+
+>s
++-----+-----+---+-----+-----+
+|HOLD |LEFT |///|RIGHT|HOLD |
++-----+-----+---+-----+-----+
+|     |  *  |///|  *  |     |
+|     | 0   |///| -2  |     |
+|     |     |///|     |     |
+|     |     |///|     |     |
+|     |     |///|     |     |
++-----+-----+---+-----+-----+
+|SUM = 19                   |
++---------------------------+
+>s
++-----+-----+---+-----+-----+
+|HOLD |LEFT |///|RIGHT|HOLD |
++-----+-----+---+-----+-----+
+|     |  *  |///| -5  |     |
+|     | 0   |///|     |     |
+|     |     |///|     |     |
+|     |     |///|     |     |
+|     |     |///|     |     |
++-----+-----+---+-----+-----+
+|SUM = 17                   |
++---------------------------+
+>a
++-----+-----+---+-----+-----+
+|HOLD |LEFT |///|RIGHT|HOLD |
++-----+-----+---+-----+-----+
+|     | -5  |///| -5  |     |
+|     |     |///|     |     |
+|     |     |///|     |     |
+|     |     |///|     |     |
+|     |     |///|     |     |
++-----+-----+---+-----+-----+
+|SUM = 17                   |
++---------------------------+
+>a
++-----+-----+---+-----+-----+
+|HOLD |LEFT |///|RIGHT|HOLD |
++-----+-----+---+-----+-----+
+|     |     |///| -5  |     |
+|     |     |///|     |     |
+|     |     |///|     |     |
+|     |     |///|     |     |
+|     |     |///|     |     |
++-----+-----+---+-----+-----+
+|SUM = 12                   |
++---------------------------+
+>s
++-----+-----+---+-----+-----+
+|HOLD |LEFT |///|RIGHT|HOLD |
++-----+-----+---+-----+-----+
+|     |     |///|     |     |
+|     |     |///|     |     |
+|     |     |///|     |     |
+|     |     |///|     |     |
+|     |     |///|     |     |
++-----+-----+---+-----+-----+
+|SUM = 7                    |
++---------------------------+
+You win!
+```
   
-## 6. Material a entregar
+## 4 Material a entregar
 
 * Ficheiro `.c` com código devidamente comentado e indentado:
     - Deve implementar as funcionalidades pedidas.
@@ -189,13 +339,13 @@ Git deve ser utilizado no desenvolvimento do trabalho. Para isso os alunos devem
     - Incorrecta indentação do código poderá originar penalizações na nota.
     - **Em cada submissão no pandora deverão incluir o link para o repositório no GitHub na linha de comentário (da plataforma)**
 
-## 7. Peso na avaliação
+## 5 Peso na avaliação
 
 O projecto vale 25% da nota final e será cotado de 0 a 20 valores.
 
 Após a entrega do projecto será realizada uma defesa do projecto onde alterações ao código serão pedidas. Se o aluno não conseguir efectuar as alterações pedidas ao seu código será aplicada uma penalização sobre a nota do projecto que poderá variar entre 10% a 100%.
 
-## 8. Honestidade Académica
+## 6 Honestidade Académica
 
 Nesta disciplina, espera-se que cada aluno siga os mais altos padrões de honestidade académica. Trabalhos que sejam identificados como cópias serão anulados e os alunos envolvidos terão nota zero - quer tenham copiado, quer tenham deixado copiar.
 Para evitar situações deste género, recomendamos aos alunos que nunca partilhem ou mostrem o seu código.
