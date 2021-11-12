@@ -14,7 +14,7 @@ int randn_sat(double, double, int, int);
 
 int main(int argc, char ** argv)
 {	
-	long seed = 5519;
+	long seed = 7;
 	int level = 3, nrows = 12, nhold = 2;
 	/* verify command line arguments */
 
