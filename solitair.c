@@ -4,29 +4,55 @@
 
 #define MSG_WIN "You Win! Congratulations!"
 #define MSG_LOSE "You Lost! Better luck next time!"
-	
+#define DEFAULT_SUM 10
+#define DEFAULT_SEED 7
+#define DEFAULT_NROWS 12
+#define DEFAULT_NHOLDS 2
+#define DEFAULT_LEVEL 3	
 
 /* needed functions */
 double uniRand(void);
 double randn(double, double);
 int randn_sat(double, double, int, int);
 
+typedef struct _board
+{
+	int * left;
+	int * right;
+	
+} board;
 
 int main(int argc, char ** argv)
 {	
-	long seed = 7;
-	int level = 3, nrows = 12, nhold = 2;
+	long seed = DEFAULT_SEED;
+	int level = DEFAULT_LEVEL, nrows = DEFAULT_NROWS, nhold = DEFAULT_NHOLDS;
+	board game;
+	
 	/* verify command line arguments */
 
 	sscanf(argv[1], "%d", &level);
 	sscanf(argv[2], "%ld", &seed);
 	sscanf(argv[3], "%d", &nrows);
+	sscanf(argv[4], "%d", &nhold);
 
 
 	/* initialize random seed */
 	srand(seed);
+	
+	/* alloc memory */
+	board.left = (int *) malloc...
+	board.right = (int *) malloc...
+	
+	/* generate numbers left: */
+	for (i = 0 ; i < nrows ; i++)
+		left[i] = randn_sat(0, level, -21, 21);
 
+	/* generate numbers right: */
+	for (i = 0 ; i < nrows ; i++)
+		right[i] = randn_sat(0, level, -21, 21);
 
+	
+	
 	return 0;
 }
 
