@@ -188,8 +188,8 @@ A geração dos números aleatórios deve ser feita invocando a função `randn_
  .   max - valor máximo possível de ser gerado - deve ser sempre 21
 
 Para que os resultados possam ser comparados, a geração de números alteatórios tem que ser feita no quando o programa inicia e pela ordem especificada: primeiro são gerados os números da coluna da LEFT e depois os números da coluna RIGHT. É ainda necessário ter em consideração a ordem pela qual os números são apresentados nas respectivas colunas. A figura seguinte mostra a ordem pela qual os números são gerados, ou seja, o número marcado como 1 é o primeiro número a ser gerado (resultado da chamada à função `randn_sat()`), o 2 é o segundo número a ser gerado... etc. Os números são todos gerados utilizando dois ciclos (um para a coluna LEFT e um para a coluna RIGHT).
- 
- 
+
+![geracao](geracao.jpg)
  
  
 ## 3 Exemplos de utilização
