@@ -154,11 +154,11 @@ O programa pode receber até 4 argumentos pela linha de comandos (argumentos do 
 ./solitair <level> <seed> <n rows> <n holds>
 ```
 onde 
-   .   <seed> valor inteiro para a seed do jogo - valor por omissão: 7
-   .   <level> é o nível de dificuldade do jogo - valor por omissão: 3
-   .   <n rows> é o número de linhas do jogo - valor por omissão: 12
-   .   <n holds> é o número de linhas disponíveis em cada coluna HOLD - valor por omissão: 2
-Caso os argumentos não sejam passados pelo utilizador, deverão ser utilizados os valores por omissão.
+   -   <seed> valor inteiro para a seed do jogo - valor por omissão: 7
+   -   <level> é o nível de dificuldade do jogo - valor por omissão: 3
+   -   <n rows> é o número de linhas do jogo - valor por omissão: 12
+   -   <n holds> é o número de linhas disponíveis em cada coluna HOLD - valor por omissão: 2
+Caso os argumentos não sejam passados pelo utilizador, deverão ser utilizados os valores por omissão. Ou seja o utilizador poderá passar apenas a seed, a seed e o level, a seed o level e o nrows ou todos os parâmetros.
 
 O nível de dificuldade relaciona-se com o desvio padrão dos números gerados. Isso é controlado pela função fornecida `randn()`. Esta função aceita dois parâmetros: a média (que deverá ser 0) e o desvio padrão que deverá ser o nível passado pela linha de comandos.
 
