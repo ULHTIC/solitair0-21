@@ -174,10 +174,23 @@ Caso perca, deverá ser apresentada a mensagem `MSG_LOSE` e em seguida o program
   .   As teclas `a` e `s` são usadas para seleccionar as cartas da coluna LEFT e RIGHT, respectivamente.
   .   As teclas `q` e `w` são usadas para colocar as cartas em HOLD nas colunas da esquerda e direita, respectivamente.
   .   As teclas `z` e `x` são usadas para remover as cartas das colunas HOLD esquerda e direirta, respectivamente.
+  .   A tecla `e` faz com que o programa termine.
 
  
 ### 2.2 Git
 Git deve ser utilizado no desenvolvimento do trabalho. Para isso os alunos devem criar um repositório **privado** no GitHub e sincronizar com a vossa cópia local do projecto. Em seguida, no GitHub, deverão ir settings->Manage Access->Add People e adicionar o professor ```parroz```. Devem sincronizar a vossa cópia local periodicamente com o repositório no GitHub (```git push```). 
+ 
+### 2.3 Geração de números aleatórios
+A geração dos números aleatórios deve ser feita invocando a função `randn_sat()`, esta função recebe 4 parâmetros: 
+ .   mean - valor médio da distribuição - deve ser sempre 0 
+ .   std - desvio padrão da distribuição - deve ser igual ao nível escolhido (variável `level`) 
+ .   min - valor mínimo possível de ser gerado - deve ser sempre -21
+ .   max - valor máximo possível de ser gerado - deve ser sempre 21
+
+Para que os resultados possam ser comparados, a geração de números alteatórios tem que ser feita no quando o programa inicia e pela ordem especificada: primeiro são gerados os números da coluna da LEFT e depois os números da coluna RIGHT. É ainda necessário ter em consideração a ordem pela qual os números são apresentados nas respectivas colunas. A figura seguinte mostra a ordem pela qual os números são gerados, ou seja, o número marcado como 1 é o primeiro número a ser gerado (resultado da chamada à função `randn_sat()`), o 2 é o segundo número a ser gerado... etc. Os números são todos gerados utilizando dois ciclos (um para a coluna LEFT e um para a coluna RIGHT).
+ 
+ 
+ 
  
 ## 3 Exemplos de utilização
 Em seguida apresentam-se alguns exemplos de jogos:
@@ -328,6 +341,7 @@ Em seguida apresentam-se alguns exemplos de jogos:
 +---------------------------+
 You win!
 ```
+ 
   
 ## 4 Material a entregar
 
