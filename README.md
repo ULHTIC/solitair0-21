@@ -338,7 +338,7 @@ Em seguida apresentam-se alguns exemplos de jogos:
 +-----+-----+---+-----+-----+
 |SUM = 7                    |
 +---------------------------+
-You win!
+You Win! Congratulations!
 ```
  
   
