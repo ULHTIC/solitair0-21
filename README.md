@@ -176,6 +176,9 @@ Caso perca, deverá ser apresentada a mensagem `MSG_LOSE` e em seguida o program
   -   As teclas `z` e `x` são usadas para remover as cartas das colunas HOLD esquerda e direirta, respectivamente.
   -   A tecla `e` faz com que o programa termine.
 
+### 2.2 Detalhes de implementação
+  - Atenção ao caracter '>' que indica que o programa está à espera de um input do utilizador.
+  - Os números que surgem nas colunas hold, left e right podem ser impressos utilizando: `printf(" %-3d ", ...)`;
  
 ### 2.2 Git
 Git deve ser utilizado no desenvolvimento do trabalho. Para isso os alunos devem criar um repositório **privado** no GitHub e sincronizar com a vossa cópia local do projecto. Em seguida, no GitHub, deverão ir settings->Manage Access->Add People e adicionar o professor ```parroz```. Devem sincronizar a vossa cópia local periodicamente com o repositório no GitHub (```git push```). 
