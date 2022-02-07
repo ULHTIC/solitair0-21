@@ -2,7 +2,7 @@
 
 *Introdução à Computação - 2021/2022*
 
-# Projecto Final - Solitair 0-21
+# Projecto Final / Projecto de Recurso - Solitair 0-21
 
 ## 1. Introdução
 
@@ -345,7 +345,7 @@ You Win! Congratulations!
 ```
  
   
-## 4 Material a entregar
+## 4 Material a entregar - Projecto Final
 
 * Ficheiro `.c` com código devidamente comentado e indentado:
     - Deve implementar as funcionalidades pedidas.
@@ -355,13 +355,34 @@ You Win! Congratulations!
     - Incorrecta indentação do código poderá originar penalizações na nota.
     - **Em cada submissão no pandora deverão incluir o link para o repositório no GitHub na linha de comentário (da plataforma)**
 
-## 5 Peso na avaliação
+ ## 4 Material a entregar - Projecto de Recurso
+
+* Ficheiro `.c` com código devidamente comentado e indentado:
+    - Deve implementar as funcionalidades pedidas.
+    - O código deverá ser submetido na plataforma PANDORA [(2)](#ref2) até às **23:59 do dia 16 de Fevereiro de 2022** no *contest* **IC2021PF**.
+    - A plataforma corre automaticamente uma série de testes e no fim atribui uma classificação **indicativa**. Os alunos deverão analisar o relatório emitido pela plataforma e poderão alterar o código e voltar a submeter o trabalho. Neste trabalho haverá limite de submissões.
+      A plataforma não permite a entrega de trabalhos após a data e hora limite.
+    - Incorrecta indentação do código poderá originar penalizações na nota.
+    - **Em cada submissão no pandora deverão incluir o link para o repositório no GitHub na linha de comentário (da plataforma)**
+
+ 
+## 5 Peso na avaliação - Projecto Final
 
 O projecto vale 25% da nota final e será cotado de 0 a 20 valores.
 
 Após a entrega do projecto será realizada uma defesa do projecto onde alterações ao código serão pedidas. Se o aluno não conseguir efectuar as alterações pedidas ao seu código será aplicada uma penalização sobre a nota do projecto que poderá variar entre 10% a 100%.
 
-## 6 Honestidade Académica
+ 
+ ## 6 Peso na avaliação - Projecto de Recurso
+
+O projecto vale 50% da nota final e será cotado de 0 a 20 valores. A avaliação do projecto será feita da seguinte forma:
+ * Nota do pandora 85%
+ * Revisão de código feita pelo professor 15%.
+Penalizações poderão ser aplicadas no caso de o código não estar correctamente indentado.
+ 
+Após a entrega do projecto será realizada uma defesa do projecto onde alterações ao código serão pedidas. Se o aluno não conseguir efectuar as alterações pedidas ao seu código será aplicada uma penalização sobre a nota do projecto que poderá variar entre 10% a 100%.
+
+## 7 Honestidade Académica
 
 Nesta disciplina, espera-se que cada aluno siga os mais altos padrões de honestidade académica. Trabalhos que sejam identificados como cópias serão anulados e os alunos envolvidos terão nota zero - quer tenham copiado, quer tenham deixado copiar.
 Para evitar situações deste género, recomendamos aos alunos que nunca partilhem ou mostrem o seu código.
